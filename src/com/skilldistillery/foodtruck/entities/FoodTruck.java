@@ -6,16 +6,21 @@ public class FoodTruck {
 	 * ("TacoRific", "Mediterranean Medic", etc.), food type ("Tacos", "Falafel",
 	 * etc.), and a numeric rating.
 	 */
-	
+
 	private int truckID;
 	private String truckName;
 	private String truckFoodType;
 	private int truckRating;
-	
-	public FoodTruck() {}
-	
-	public FoodTruck(int truckID, String truckName, String truckFoodType, int truckRating) {
+
+	public FoodTruck() {
+	}
+
+	public FoodTruck(int truckID) {
 		this.truckID = truckID;
+	}
+
+	public FoodTruck(int truckID, String truckName, String truckFoodType, int truckRating) {
+		this(truckID);
 		this.truckName = truckName;
 		this.truckFoodType = truckFoodType;
 		this.truckRating = truckRating;
@@ -45,7 +50,7 @@ public class FoodTruck {
 		this.truckFoodType = truckFoodType;
 	}
 
-	public int getTruckRating() {
+	public double getTruckRating() {
 		return truckRating;
 	}
 
@@ -55,9 +60,8 @@ public class FoodTruck {
 
 	@Override
 	public String toString() {
-		return "FoodTruck [truckID=" + truckID + ", truckName=" + truckName + ", truckFoodType=" + truckFoodType
-				+ ", truckRating=" + truckRating + "]";
+		return "FoodTruck [truck ID = " + truckID + ", Name = " + truckName + ", Food type = " + truckFoodType
+				+ ", Rating = " + truckRating + "]";
 	}
-	
-	
+
 }
