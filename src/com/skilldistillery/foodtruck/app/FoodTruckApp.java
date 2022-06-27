@@ -8,17 +8,12 @@ import com.skilldistillery.foodtruck.entities.FoodTruck;
 
 public class FoodTruckApp {
 
-//	private final int MAX_TRUCKS = 5;
 	private static Scanner scanner = new Scanner(System.in);
 	private FoodTruck[] fleetOfFoodTrucks = new FoodTruck[5];
 	FoodTruck ft = new FoodTruck();
 	private static int nextTruckID = 0;
 
 	private int numTrucks = 0;
-//	fleetOfFoodTrucks[0] = FoodTruck ft2;
-//	FoodTruck ft3;
-//	FoodTruck ft4;
-//	FoodTruck ft5;
 
 	public static void main(String[] args) {
 
@@ -80,7 +75,6 @@ public class FoodTruckApp {
 
 	private boolean enterFoodTruckInfo(String input1, int truckID, int index) {
 
-//			for (int i = 0; i < fleetOfFoodTrucks.length; i++) {
 				
 					System.out.println("Please enter the name of the food truck: ");
 					String truckName = scanner.nextLine();
@@ -93,14 +87,11 @@ public class FoodTruckApp {
 						String truckFoodType = scanner.nextLine();
 						fleetOfFoodTrucks[index].setTruckFoodType(truckFoodType);
 						fleetOfFoodTrucks[index].setTruckRating(getTruckRating(truckName));
-//						scanner.nextLine();
 						addTruck(fleetOfFoodTrucks[index]);
-//						System.out.println(" i: " + i); // for testing
 						if (index == fleetOfFoodTrucks.length - 1) {
 							return false;
 						}
 					}
-//				}
 			return true;
 
 		
@@ -135,14 +126,14 @@ public class FoodTruckApp {
 		boolean keepGoing = true;
 		while (keepGoing) {
 			System.out.println("Please select from the following list of options.");
-			System.out.println("--------------------");
-			System.out.println("-----          -----");
+			System.out.println("-----------------------------------------");
+			System.out.println("-----                               -----");
 			System.out.println("-1. List all food trucks");
 			System.out.println("-2. Display average rating of food trucks");
 			System.out.println("-3. Display the highest rated food truck");
 			System.out.println("-4. Exit the program");
-			System.out.println("-----          -----");
-			System.out.println("--------------------");
+			System.out.println("-----                               -----");
+			System.out.println("-----------------------------------------");
 			int selection = scanner.nextInt();
 			switch (selection) {
 			case 1:
